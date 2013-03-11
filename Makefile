@@ -1,7 +1,7 @@
 -include config.mak
 
-SRCS = acodec_omx.c avahi.c avl.c channels.c codec.c events.c htsp.c \
-       pidvbip.c omx_utils.c osd.c tiresias_pcfont.c vcodec_omx.c vo_pi.c
+SRCS = sha1.c acodec_omx.c avahi.c avl.c channels.c codec.c events.c htsp.c \
+       configfile.c pidvbip.c omx_utils.c osd.c tiresias_pcfont.c vcodec_omx.c vo_pi.c
 BIN  = pidvbip
 
 DEPMM = -MM
@@ -10,6 +10,10 @@ LIBVGFONT = libs/vgfont/libvgfont.a
 
 ifneq ($(findstring HAVE_LIBCEC 1, $(CONFIG)),)
   SRCS += cec.c
+endif
+
+ifneq ($(findstring HAVE_LIBAVFORMAT 1, $(CONFIG)),)
+  SRCS += avplay.c
 endif
 
 OBJS = $(SRCS:%.c=%.o)
