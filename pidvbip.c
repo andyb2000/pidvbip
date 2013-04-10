@@ -463,6 +463,7 @@ int get_input_key(int fd)
             return 'i';
           case KEY_Q:
           case KEY_RED:
+          case KEY_ZOOM:
             return 'q';
           case KEY_N:
           case KEY_PAGEUP:
