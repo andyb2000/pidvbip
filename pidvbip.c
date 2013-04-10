@@ -478,14 +478,21 @@ int get_input_key(int fd)
           case KEY_DOWN:
             return 'd';
           case KEY_LEFT:
+          case KEY_WORDPROCESSOR:
+          case KEY_ARCHIVE:
             return 'l';
           case KEY_RIGHT:
+          case KEY_ZOOMOUT:
+          case KEY_PROGRAM:
             return 'r';
           case KEY_O:
           case KEY_TAPE:
+          case BTN_TL2:
+          case KEY_EDITOR:
             return 'o';
           case KEY_SCREEN:
           case BTN_TRIGGER_HAPPY16:
+          case KEY_ZOOMRESET:
             return ' ';
    
           default: break;
