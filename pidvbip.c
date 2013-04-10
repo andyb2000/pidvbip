@@ -489,6 +489,7 @@ int get_input_key(int fd)
           case KEY_TAPE:
           case BTN_TL2:
           case KEY_EDITOR:
+          case KEY_ZOOMRESET:
             return 'o';
           case KEY_SCREEN:
           case BTN_TRIGGER_HAPPY16:
